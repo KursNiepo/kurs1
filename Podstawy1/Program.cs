@@ -37,8 +37,9 @@ namespace Podstawy1
             return new List<User> {
                 new User() {Imie = "Adam",Nazwisko = "Nowak",Wiek = 23},
                 new User() {Imie = "Roman",Nazwisko = "Kowal",Wiek = 45},
-                new User() {Imie = "Anna",Nazwisko = "Pałka",Wiek = 23},
+                new User() {Imie = "Anna",Nazwisko = "Pałka",Wiek = 26},
                 new User() {Imie = "Tomasz",Nazwisko = "Jonasz",Wiek = 33},
+                new User() {Imie = "Zuzanna",Nazwisko = "Urych",Wiek = 23},
             };
         }
 
@@ -51,8 +52,15 @@ namespace Podstawy1
            // int nr = Convert.ToInt32(Console.ReadLine());
            // Console.WriteLine(r1.Dzien(nr));
             List<User> lista = r1.GetUsers();
-            foreach (User user in lista) {
-                Console.WriteLine(user.Imie+" "+user.Nazwisko+" wiek: "+user.Wiek);
+            IQueryable<User> wybrane = lista.AsQueryable()
+                .Where(e => (e.Wiek > 25));
+            IQueryable<User> wybrane2 = lista.AsQueryable()
+                .Where(e => (e.Imie.EndsWith("a")));
+            IQueryable<User> wybrane3 = lista.AsQueryable()
+                .Where(e => (e.Imie.EndsWith("a") && e.Wiek<25));
+            foreach (User user in wybrane3) {
+                Console.WriteLine(user.Imie+" "+user.Nazwisko+" wiek: "
+                       +user.Wiek);
             }
             Console.ReadKey();
         }
