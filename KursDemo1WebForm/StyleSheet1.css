@@ -1,0 +1,20 @@
+﻿body {
+}
+#banner {
+    background-color: burlywood;
+    font-size: 3em;
+    height: 150px;
+}
+div#lewy {
+    float: left;
+    width: 250px;
+    background-color: bisque;
+}
+ul.nav {
+    list-style: none;
+}
+ul.nav li a {
+    display: inline-block;
+    text-decoration: none;
+    color: chocolate;
+}
