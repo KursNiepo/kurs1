@@ -1,0 +1,17 @@
+﻿@model List<MVCFirst.Models.Gra>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista Gier</h2>
+<div>
+    @foreach (var gra in Model) {
+        <p class="gra">
+            Nazwa gry: <span class="wyr">@gra.Nazwa</span> <br/>
+            Opis gry: <span class="wyr">@gra.Opis</span> <br/>
+            Gatunek gry:<span class="wyr">@gra.Gatunek</span><br/>
+            Ocena gry:<span class="wyr"> @gra.Ocena </span>
+            <img src="@gra.UrlImg" alt="obrazek"/>
+        </p>
+    }
+</div>

@@ -42,3 +42,14 @@ tr:hover {
     color: white;
     background-color: grey;
 }
+p.gra {
+    border: solid thin black;
+    box-shadow: darkgoldenrod 5px 5px 5px;
+    border-radius: 10px;
+    background-color: goldenrod;
+    padding: 15px;
+}
+span.wyr {
+    color: #322410;
+    font-weight: bold;
+}
