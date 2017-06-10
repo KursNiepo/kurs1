@@ -1,0 +1,14 @@
+﻿@model List<MVCFirst.Models.Worker>
+@{
+    ViewBag.Title = "SelectWorker";
+}
+
+<h2>SelectWorker</h2>
+
+<select>
+    @foreach (var worker in Model) {
+        <option value="@worker.LastName">
+            @worker.FirstName @worker.LastName pensja: @worker.Salary
+        </option>
+    }
+</select>

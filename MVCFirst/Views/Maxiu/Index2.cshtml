@@ -1,0 +1,23 @@
+﻿@using MVCFirst.Models
+@model List<MVCFirst.Models.Worker>
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+<div id="dane">
+    <table class="pracownicy">
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Pensja</th>
+        </tr>
+    @foreach (Worker worker in Model) {
+        <tr>
+            <td>@worker.FirstName</td>
+            <td>@worker.LastName</td>
+            <td>@worker.Salary</td>
+        </tr>
+    }
+    </table>
+</div>
